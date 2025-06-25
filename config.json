@@ -1,0 +1,61 @@
+{
+    "thresholds": {
+        "id_to_selfie": {
+            "insightface": 0.70,
+            "facenet": 0.70,
+            "dlib": 0.70
+        },
+        "selfie_to_selfie": {
+            "insightface": 0.82,
+            "facenet": 0.82,
+            "dlib": 0.82
+        }
+    },
+    "preprocessing": {
+        "target_size": [224, 224],
+        "clahe_clip_limit": 2.0,
+        "clahe_tile_size": [8, 8],
+        "gaussian_blur_kernel": [3, 3],
+        "padding_ratio": 0.3,
+        "brightness_enhance": 1.1,
+        "contrast_enhance": 1.2,
+        "sharpness_enhance": 1.2,
+        "color_enhance": 1.0,
+        "noise_reduction": true,
+        "histogram_matching": true,
+        "resize": true,
+        "padding": true,
+        "equalization": true,
+        "adaptive_enhancement": true,
+        "base_blur_threshold": 15,
+        "adaptive_brightness_range": [10, 250]
+    },
+    "models": {
+        "insightface": {
+            "det_size": [640, 640],
+            "model_name": "buffalo_l",
+            "use_fp16": false,
+            "weight": 0.40
+        },
+        "facenet": {
+            "pretrained": "vggface2",
+            "use_attention": true,
+            "weight": 0.35
+        },
+        "dlib": {
+            "num_jitters": 5,
+            "use_5pt_landmarks": false,
+            "use_cnn_detector": true,
+            "weight": 0.25
+        }
+    },
+    "ensemble": {
+        "min_models": 1,
+        "base_threshold": 0.35,
+        "confidence_levels": {
+            "low": [0.0, 0.6],
+            "medium": [0.6, 0.8],
+            "high": [0.8, 1.0]
+        }
+    }
+}
