@@ -1,0 +1,53 @@
+# ────────────────
+# Python artifacts
+# ────────────────
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# ────────────────
+# Editor & system files
+# ────────────────
+.vscode/
+.idea/
+*.log
+*.DS_Store
+
+# ────────────────
+# Jupyter / test / dev files
+# ────────────────
+*.ipynb
+notebooks/
+tests/
+sample_images/
+
+# ────────────────
+# Build / packaging
+# ────────────────
+build/
+dist/
+*.egg-info/
+
+# ────────────────
+# Model files — they are downloaded during build
+# ────────────────
+*.dat.bz2
+*.onnx
+*.params
+*.weights
+
+# ────────────────
+# Version control & CI/CD
+# ────────────────
+.git/
+.gitignore
+.github/
+
+# ────────────────
+# Docker build files — unnecessary inside context
+# ────────────────
+Dockerfile
+.dockerignore
