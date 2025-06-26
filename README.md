@@ -316,6 +316,12 @@ The service provides comprehensive logging. Set log level in the startup configu
 ```python
 logging.basicConfig(level=logging.DEBUG)  # For detailed logs
 ```
+###dockerized project link
+```
+https://hub.docker.com/r/harinagireddykatta/face_verification_system
+
+docker pull harinagireddykatta/face_verification_system
+```
 
 ## License
 
